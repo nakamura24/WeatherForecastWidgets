@@ -14,9 +14,8 @@
         android:id="@+id/textView_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
         android:textColor="#000"
-        android:textSize="12sp"
+        android:textSize="@dimen/location_textSize"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -29,7 +28,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/horizontal_margin" >
+            android:layout_marginLeft="@dimen/twodays_horizontal_margin" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -46,9 +45,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:text=""
+                        android:layout_centerHorizontal="true"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/twodays_date_textSize"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -56,22 +55,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView_date1"
+                        android:layout_centerHorizontal="true"
                         android:contentDescription="@string/app_name" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/horizontal_margin" >
+                    android:layout_marginLeft="@dimen/twodays_horizontal_margin" >
 
                     <TextView
                         android:id="@+id/textView_max1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:text=""
+                        android:layout_centerHorizontal="true"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/twodays_temp_textSize"
                         android:textStyle="bold" />
 
                     <TextView
@@ -79,9 +79,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView_max1"
-                        android:text=""
+                        android:layout_centerHorizontal="true"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/twodays_temp_textSize"
                         android:textStyle="bold" />
                 </RelativeLayout>
             </LinearLayout>
@@ -91,16 +91,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text=""
+                android:layout_centerHorizontal="true"
                 android:textColor="#000"
-                android:textSize="14sp"
+                android:textSize="@dimen/twodays_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/horizontal_margin" >
+            android:layout_marginLeft="@dimen/twodays_horizontal_margin" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -117,9 +117,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:text=""
+                        android:layout_centerHorizontal="true"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/twodays_date_textSize"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -127,22 +127,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView_date2"
+                        android:layout_centerHorizontal="true"
                         android:contentDescription="@string/app_name" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/horizontal_margin" >
+                    android:layout_marginLeft="@dimen/twodays_horizontal_margin" >
 
                     <TextView
                         android:id="@+id/textView_max2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:text=""
+                        android:layout_centerHorizontal="true"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/twodays_temp_textSize"
                         android:textStyle="bold" />
 
                     <TextView
@@ -150,9 +151,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView_max2"
-                        android:text=""
+                        android:layout_centerHorizontal="true"
                         android:textColor="@android:color/black"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/twodays_temp_textSize"
                         android:textStyle="bold" />
                 </RelativeLayout>
             </LinearLayout>
@@ -162,9 +163,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text=""
+                android:layout_centerHorizontal="true"
                 android:textColor="#000"
-                android:textSize="14sp"
+                android:textSize="@dimen/twodays_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
