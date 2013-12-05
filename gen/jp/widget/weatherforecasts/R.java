@@ -15,14 +15,26 @@ public final class R {
     public static final class attr {
     }
     public static final class dimen {
-        public static final int date_textSize=0x7f050004;
-        public static final int forecast_image_size=0x7f050007;
-        public static final int horizontal_margin=0x7f050002;
-        public static final int image_vertical_margin=0x7f050003;
-        public static final int probability_textSize=0x7f050006;
-        public static final int temp_textSize=0x7f050005;
-        public static final int weekly_date_textSize=0x7f050008;
-        public static final int weekly_temp_textSize=0x7f050009;
+        public static final int location_textSize=0x7f050002;
+        public static final int stack_date_textSize=0x7f050012;
+        public static final int stack_temp_textSize=0x7f050013;
+        public static final int stacks_horizontal_margin=0x7f050015;
+        public static final int stacks_probability_textSize=0x7f050014;
+        public static final int today_date_textSize=0x7f050006;
+        public static final int today_day_temp_textSize=0x7f050007;
+        public static final int today_forecast_image_size=0x7f050005;
+        public static final int today_horizontal_margin=0x7f050003;
+        public static final int today_hour_temp_textSize=0x7f05000a;
+        public static final int today_hour_textSize=0x7f050009;
+        public static final int today_image_vertical_margin=0x7f050004;
+        public static final int today_probability_textSize=0x7f050008;
+        public static final int twodays_date_textSize=0x7f05000c;
+        public static final int twodays_horizontal_margin=0x7f05000b;
+        public static final int twodays_probability_textSize=0x7f05000e;
+        public static final int twodays_temp_textSize=0x7f05000d;
+        public static final int weekly_date_textSize=0x7f05000f;
+        public static final int weekly_horizontal_margin=0x7f050011;
+        public static final int weekly_temp_textSize=0x7f050010;
         /**  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
          */
@@ -68,12 +80,12 @@ public final class R {
     public static final class id {
         public static final int analogClock=0x7f090022;
         public static final int button_ok=0x7f09001a;
-        public static final int ics_imageView_forecast=0x7f090007;
+        public static final int ics_imageView_forecast=0x7f090008;
         public static final int ics_linearlayout=0x7f090000;
         public static final int ics_relativeLayout_forecast=0x7f090004;
-        public static final int ics_relativeLayout_temp=0x7f090008;
+        public static final int ics_relativeLayout_forecast1=0x7f090006;
         public static final int ics_stack_view=0x7f090001;
-        public static final int ics_textView_date=0x7f090006;
+        public static final int ics_textView_date=0x7f090007;
         public static final int ics_textView_location=0x7f090003;
         public static final int ics_textView_max=0x7f090009;
         public static final int ics_textView_min=0x7f09000a;
