@@ -65,7 +65,7 @@ public class WidgetWeeklyService extends RemoteViewsService {
 				// or getViewAt(). Taking more than 20 seconds in this call will
 				// result in an ANR.
 				StaticHash hash = new StaticHash(mContext);
-				int id = hash.get(LOCATEID,
+				int id = hash.get(LOCATEID + "ics.WidgetWeekly",
 						String.valueOf(mAppWidgetId), INIT_ID);
 				mWeatherForecast = new WeatherForecast();
 				mLocation = mWeatherForecast.getLocationName(id);
@@ -98,7 +98,7 @@ public class WidgetWeeklyService extends RemoteViewsService {
 			// need to worry about
 			// locking up the widget.
 			StaticHash hash = new StaticHash(mContext);
-			int id = hash.get(LOCATEID,
+			int id = hash.get(LOCATEID + "ics.WidgetWeekly",
 					String.valueOf(mAppWidgetId), INIT_ID);
 			mWeatherForecast = new WeatherForecast();
 			mLocation = mWeatherForecast.getLocationName(id);

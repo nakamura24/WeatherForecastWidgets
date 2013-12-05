@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.widget.weatherforecasts"
-    android:versionCode="1"
-    android:versionName="1.0.1" >
+    android:versionCode="2"
+    android:versionName="1.0.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -27,6 +27,11 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_today" />
         </receiver>
+
+        <service
+            android:name=".WidgetToday$WidgetService"
+            android:exported="false" />
+
         <receiver
             android:name=".WidgetToday2"
             android:label="@string/widget_today2_name" >
@@ -38,6 +43,11 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_today2" />
         </receiver>
+
+        <service
+            android:name=".WidgetToday2$WidgetService"
+            android:exported="false" />
+
         <receiver
             android:name=".Widget2days"
             android:label="@string/widget_2days_name" >
@@ -49,6 +59,11 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_2days" />
         </receiver>
+
+        <service
+            android:name=".Widget2days$WidgetService"
+            android:exported="false" />
+
         <receiver
             android:name=".WidgetWeekly"
             android:label="@string/widget_weekly_name" >
@@ -60,6 +75,11 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_weekly" />
         </receiver>
+
+        <service
+            android:name=".WidgetWeekly$WidgetService"
+            android:exported="false" />
+
         <receiver
             android:name=".ics.WidgetWeekly"
             android:label="@string/ics_widget_weekly_name" >
@@ -72,6 +92,9 @@
                 android:resource="@xml/ics_widget_weekly" />
         </receiver>
 
+        <service
+            android:name=".ics.WidgetWeekly$WidgetService"
+            android:exported="false" />
         <service
             android:name=".ics.WidgetWeeklyService"
             android:exported="false"
