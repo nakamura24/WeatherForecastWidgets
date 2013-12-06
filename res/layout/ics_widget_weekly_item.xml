@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/location_textSize" />
+        android:textSize="@dimen/stacks_location_textSize" />
 
     <RelativeLayout
         android:id="@+id/ics_relativeLayout_forecast"
@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/ics_textView_probability"
         android:layout_below="@+id/ics_textView_location"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/stacks_vertical_margin" >
 
         <RelativeLayout
             android:id="@+id/ics_relativeLayout_forecast1"
@@ -42,14 +43,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ics_textView_date"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/stacks_vertical_margin"
                 android:contentDescription="@string/app_name" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/ics_relativeLayout_forecast1"
-            android:layout_marginLeft="@dimen/stacks_horizontal_margin" >
+            android:layout_marginLeft="@dimen/stacks_horizontal_margin"
+            android:layout_toRightOf="@+id/ics_relativeLayout_forecast1" >
 
             <TextView
                 android:id="@+id/ics_textView_max"
@@ -65,6 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ics_textView_max"
+                android:layout_marginTop="@dimen/stacks_vertical_margin"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/stack_temp_textSize"
                 android:textStyle="bold" />

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="weekly_date_textSize">15sp</dimen>
+    <dimen name="weekly_temp_textSize">14sp</dimen>
+    <dimen name="stacks_location_textSize">10sp</dimen>
+    <dimen name="stack_date_textSize">10sp</dimen>
+    <dimen name="stack_temp_textSize">11sp</dimen>
+    <dimen name="stacks_probability_textSize">11sp</dimen>
+    <dimen name="stacks_horizontal_margin">8dp</dimen>
+    <dimen name="stacks_vertical_margin">-2dp</dimen>
+    
+</resources>
