@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout_today2"
@@ -23,12 +24,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_location"
+        android:layout_centerHorizontal="true"
         android:baselineAligned="false"
-        android:gravity="center_vertical" >
+        android:orientation="horizontal" >
 
         <RelativeLayout
             android:id="@+id/relativeLayout1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical" >
@@ -39,16 +41,16 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:textColor="#000"
-                android:textSize="@dimen/today_date_textSize"
+                android:textSize="@dimen/today2_date_textSize"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView_forecast"
-                android:layout_width="@dimen/today_forecast_image_size"
-                android:layout_height="@dimen/today_forecast_image_size"
+                android:layout_width="@dimen/today2_forecast_image_size"
+                android:layout_height="@dimen/today2_forecast_image_size"
                 android:layout_below="@+id/textView_date"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/today_image_vertical_margin"
+                android:layout_marginTop="@dimen/today2_image_vertical_margin"
                 android:contentDescription="@string/app_name" />
 
             <TextView
@@ -57,37 +59,54 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView_forecast"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/today_image_vertical_margin"
+                android:layout_marginTop="@dimen/today2_image_vertical_margin"
                 android:textColor="#000"
-                android:textSize="@dimen/today_day_temp_textSize"
+                android:textSize="@dimen/today2_day_temp_textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/today2_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <AnalogClock
-            android:id="@+id/analogClock"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:dial="@drawable/dial"
-            android:hand_hour="@drawable/hour_black"
-            android:hand_minute="@drawable/minute_black" />
-    </LinearLayout>
+            android:layout_marginLeft="@dimen/today2_horizontal_margin"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView_probability"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000"
-        android:textSize="@dimen/today_probability_textSize"
-        android:textStyle="bold" />
+            <AnalogClock
+                android:id="@+id/analogClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:dial="@drawable/dial"
+                android:hand_hour="@drawable/hour_black"
+                android:hand_minute="@drawable/minute_black" />
+
+            <TextView
+                android:id="@+id/textView_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/analogClock"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/today2_battery_textSize"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_probability"
+        android:layout_below="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
         android:baselineAligned="false"
         android:orientation="horizontal" >

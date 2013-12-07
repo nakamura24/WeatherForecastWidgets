@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.LinearLayout.LayoutParams;
 
@@ -58,7 +59,18 @@ public class WidgetConfigure extends Activity {
 			getWindow().setLayout(LayoutParams.MATCH_PARENT,
 					LayoutParams.WRAP_CONTENT);
 
+			ArrayAdapter<String> forecast_location_adapter = new ArrayAdapter<String>(
+					this, android.R.layout.simple_spinner_item);
+			forecast_location_adapter
+					.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			// アイテムを追加します
+			for (int i = 0; i < mWeatherForecast.getLocationIDs().length; i++) {
+				forecast_location_adapter.add(mWeatherForecast
+						.getLocationName(mWeatherForecast.getLocationIDs()[i]));
+			}
 			Spinner spinner1 = (Spinner) findViewById(R.id.spinner_pref);
+	        // アダプターを設定します
+			spinner1.setAdapter(forecast_location_adapter);
 			// Spinner のアイテムが選択された時に呼び出されるコールバックを登録
 			spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 				// アイテムが選択された時の動作
