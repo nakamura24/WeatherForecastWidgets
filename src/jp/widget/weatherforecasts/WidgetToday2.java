@@ -22,6 +22,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -31,6 +32,7 @@ import static jp.widget.weatherforecasts.Constant.*;
 
 public class WidgetToday2 extends WidgetBase {
 	public static final String TAG = "WidgetToday2";
+	private static int mBattery = 0;
 
 	@Override
 	public void onEnabled(Context context) {
@@ -158,7 +160,8 @@ public class WidgetToday2 extends WidgetBase {
 					pendingIntent);
 
 			StaticHash hash = new StaticHash(context);
-			int id = hash.get(LOCATEID + TAG, String.valueOf(appWidgetId), INIT_ID);
+			int id = hash.get(LOCATEID + TAG, String.valueOf(appWidgetId),
+					INIT_ID);
 
 			weatherForecast = new WeatherForecast();
 			remoteViews.setTextViewText(R.id.textView_location,
@@ -177,6 +180,9 @@ public class WidgetToday2 extends WidgetBase {
 					weeklyForecasts.get(0).Temp);
 			remoteViews.setTextViewText(R.id.textView_probability,
 					weeklyForecasts.get(0).Probability);
+			Resources resource = context.getResources();
+			String battery = resource.getString(R.string.battery);
+			remoteViews.setTextViewText(R.id.textView_battery, String.format(battery, mBattery));
 
 			int[] textView_hours = { R.id.textView_hour1, R.id.textView_hour2,
 					R.id.textView_hour3, R.id.textView_hour4,
@@ -220,6 +226,7 @@ public class WidgetToday2 extends WidgetBase {
 			Log.i(TAG, "onCreate");
 			IntentFilter filter = new IntentFilter();
 			filter.addAction(Intent.ACTION_USER_PRESENT);
+			filter.addAction(Intent.ACTION_BATTERY_CHANGED);
 			registerReceiver(mReceiver, filter);
 		}
 
@@ -234,7 +241,7 @@ public class WidgetToday2 extends WidgetBase {
 			@Override
 			public void onReceive(final Context context, Intent intent) {
 				Log.i(TAG, "mReceiver onReceive = " + intent.getAction());
-				if (Intent.ACTION_USER_PRESENT.equals(intent.getAction())) {
+				try {
 					StaticHash hash = new StaticHash(context);
 					ArrayList<String> appWidgetIds = hash.keys(LOCATEID + TAG);
 					for (int i = 0; i < appWidgetIds.size(); i++) {
@@ -243,15 +250,30 @@ public class WidgetToday2 extends WidgetBase {
 						int id = hash.get(LOCATEID + TAG,
 								String.valueOf(appWidgetId), INIT_ID);
 						final WeatherForecast weatherForecast = new WeatherForecast();
-						weatherForecast.setOnPostExecute(new OnPostExecute() {
-							@Override
-							public void onPostExecute() {
-								updateAppWidget(context, appWidgetId,
-										weatherForecast);
-							}
-						});
-						weatherForecast.getForecast(context, id);
+						if (Intent.ACTION_USER_PRESENT.equals(intent
+								.getAction())) {
+							weatherForecast
+									.setOnPostExecute(new OnPostExecute() {
+										@Override
+										public void onPostExecute() {
+											updateAppWidget(context,
+													appWidgetId,
+													weatherForecast);
+										}
+									});
+							weatherForecast.getForecast(context, id);
+						}
+						if (Intent.ACTION_BATTERY_CHANGED.equals(intent
+								.getAction())) {
+							int level = intent.getIntExtra("level", 0);
+							int scale = intent.getIntExtra("scale", 0);
+							mBattery = (int) (level * 100 / scale);
+							updateAppWidget(context, appWidgetId,
+									weatherForecast);
+						}
 					}
+				} catch (Exception ex) {
+					Log.e(TAG, ex.getMessage());
 				}
 			}
 		};

@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Large screen margins, per the Android Design guidelines. -->
+    <dimen name="location_textSize">12sp</dimen>
+    <dimen name="today_horizontal_margin">24dp</dimen>
+    <dimen name="today_image_vertical_margin">-16dp</dimen>
+    <dimen name="today_forecast_image_size">80dp</dimen>
+    <dimen name="today_date_textSize">20sp</dimen>
+    <dimen name="today_day_temp_textSize">16sp</dimen>
+    <dimen name="today_probability_textSize">16sp</dimen>
+    <dimen name="today_battery_textSize">14sp</dimen>
+    <dimen name="today2_horizontal_margin">8dp</dimen>
+    <dimen name="today2_image_vertical_margin">-12dp</dimen>
+    <dimen name="today2_forecast_image_size">60dp</dimen>
+    <dimen name="today2_date_textSize">16sp</dimen>
+    <dimen name="today2_day_temp_textSize">14sp</dimen>
+    <dimen name="today2_probability_textSize">14sp</dimen>
+    <dimen name="today2_battery_textSize">14sp</dimen>
+    <dimen name="today_hour_textSize">12sp</dimen>
+    <dimen name="today_hour_temp_textSize">12sp</dimen>
+    <dimen name="twodays_horizontal_margin">8dp</dimen>
+    <dimen name="twodays_date_textSize">15sp</dimen>
+    <dimen name="twodays_temp_textSize">15sp</dimen>
+    <dimen name="twodays_probability_textSize">14sp</dimen>
+    <dimen name="weekly_date_textSize">15sp</dimen>
+    <dimen name="weekly_temp_textSize">14sp</dimen>
+    <dimen name="stacks_location_textSize">12sp</dimen>
+    <dimen name="stack_date_textSize">14sp</dimen>
+    <dimen name="stack_temp_textSize">14sp</dimen>
+    <dimen name="stacks_probability_textSize">12sp</dimen>
+    <dimen name="stacks_horizontal_margin">8dp</dimen>
+    <dimen name="stacks_vertical_margin">-2dp</dimen>
+
+</resources>

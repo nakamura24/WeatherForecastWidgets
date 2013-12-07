@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout_today"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_location"
         android:layout_centerHorizontal="true"
+        android:baselineAligned="false"
         android:orientation="horizontal" >
 
         <RelativeLayout
@@ -73,15 +75,31 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <AnalogClock
-            android:id="@+id/analogClock"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/today_horizontal_margin"
             android:layout_weight="1"
-            android:dial="@drawable/dial"
-            android:hand_hour="@drawable/hour_black"
-            android:hand_minute="@drawable/minute_black" />
+            android:orientation="vertical" >
+
+            <AnalogClock
+                android:id="@+id/analogClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:dial="@drawable/dial"
+                android:hand_hour="@drawable/hour_black"
+                android:hand_minute="@drawable/minute_black" />
+
+            <TextView
+                android:id="@+id/textView_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/analogClock"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/today_battery_textSize"
+                android:textStyle="bold" />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout

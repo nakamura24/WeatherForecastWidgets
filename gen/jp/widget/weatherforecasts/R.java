@@ -8,33 +8,42 @@
 package jp.widget.weatherforecasts;
 
 public final class R {
-    public static final class array {
-        public static final int ids=0x7f070001;
-        public static final int locations=0x7f070000;
-    }
     public static final class attr {
     }
     public static final class dimen {
+        /**  Large screen margins, per the Android Design guidelines. 
+ Normal screen margins, per the Android Design guidelines. 
+ x-Large screen margins, per the Android Design guidelines. 
+         */
         public static final int location_textSize=0x7f050002;
-        public static final int stack_date_textSize=0x7f050012;
-        public static final int stack_temp_textSize=0x7f050013;
-        public static final int stacks_horizontal_margin=0x7f050015;
-        public static final int stacks_probability_textSize=0x7f050014;
+        public static final int stack_date_textSize=0x7f05001a;
+        public static final int stack_temp_textSize=0x7f05001b;
+        public static final int stacks_horizontal_margin=0x7f05001d;
+        public static final int stacks_location_textSize=0x7f050019;
+        public static final int stacks_probability_textSize=0x7f05001c;
+        public static final int stacks_vertical_margin=0x7f05001e;
+        public static final int today2_battery_textSize=0x7f050010;
+        public static final int today2_date_textSize=0x7f05000d;
+        public static final int today2_day_temp_textSize=0x7f05000e;
+        public static final int today2_forecast_image_size=0x7f05000c;
+        public static final int today2_horizontal_margin=0x7f05000a;
+        public static final int today2_image_vertical_margin=0x7f05000b;
+        public static final int today2_probability_textSize=0x7f05000f;
+        public static final int today_battery_textSize=0x7f050009;
         public static final int today_date_textSize=0x7f050006;
         public static final int today_day_temp_textSize=0x7f050007;
         public static final int today_forecast_image_size=0x7f050005;
         public static final int today_horizontal_margin=0x7f050003;
-        public static final int today_hour_temp_textSize=0x7f05000a;
-        public static final int today_hour_textSize=0x7f050009;
+        public static final int today_hour_temp_textSize=0x7f050012;
+        public static final int today_hour_textSize=0x7f050011;
         public static final int today_image_vertical_margin=0x7f050004;
         public static final int today_probability_textSize=0x7f050008;
-        public static final int twodays_date_textSize=0x7f05000c;
-        public static final int twodays_horizontal_margin=0x7f05000b;
-        public static final int twodays_probability_textSize=0x7f05000e;
-        public static final int twodays_temp_textSize=0x7f05000d;
-        public static final int weekly_date_textSize=0x7f05000f;
-        public static final int weekly_horizontal_margin=0x7f050011;
-        public static final int weekly_temp_textSize=0x7f050010;
+        public static final int twodays_date_textSize=0x7f050014;
+        public static final int twodays_horizontal_margin=0x7f050013;
+        public static final int twodays_probability_textSize=0x7f050016;
+        public static final int twodays_temp_textSize=0x7f050015;
+        public static final int weekly_date_textSize=0x7f050017;
+        public static final int weekly_temp_textSize=0x7f050018;
         /**  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
          */
@@ -78,72 +87,73 @@ public final class R {
         public static final int weather30=0x7f020021;
     }
     public static final class id {
-        public static final int analogClock=0x7f090022;
-        public static final int button_ok=0x7f09001a;
-        public static final int ics_imageView_forecast=0x7f090008;
-        public static final int ics_linearlayout=0x7f090000;
-        public static final int ics_relativeLayout_forecast=0x7f090004;
-        public static final int ics_relativeLayout_forecast1=0x7f090006;
-        public static final int ics_stack_view=0x7f090001;
-        public static final int ics_textView_date=0x7f090007;
-        public static final int ics_textView_location=0x7f090003;
-        public static final int ics_textView_max=0x7f090009;
-        public static final int ics_textView_min=0x7f09000a;
-        public static final int ics_textView_probability=0x7f090005;
-        public static final int ics_widget_weekly_item=0x7f090002;
-        public static final int imageView1=0x7f09000e;
-        public static final int imageView2=0x7f090013;
-        public static final int imageView3=0x7f090029;
-        public static final int imageView4=0x7f09002c;
-        public static final int imageView5=0x7f09002f;
-        public static final int imageView6=0x7f090032;
-        public static final int imageView7=0x7f090035;
-        public static final int imageView8=0x7f090038;
-        public static final int imageView_forecast=0x7f09001f;
-        public static final int linearLayout1=0x7f09001c;
-        public static final int linearLayout2=0x7f090023;
-        public static final int relativeLayout=0x7f090017;
-        public static final int relativeLayout1=0x7f09001d;
-        public static final int relativeLayout_2days=0x7f09000b;
-        public static final int relativeLayout_today=0x7f09001b;
-        public static final int relativeLayout_today2=0x7f09003a;
-        public static final int relativeLayout_weekly=0x7f09003b;
-        public static final int spinner_pref=0x7f090019;
-        public static final int textView_date=0x7f09001e;
-        public static final int textView_date1=0x7f09000d;
-        public static final int textView_date2=0x7f090012;
-        public static final int textView_date3=0x7f09003c;
-        public static final int textView_date4=0x7f09003d;
-        public static final int textView_date5=0x7f09003e;
-        public static final int textView_date6=0x7f09003f;
-        public static final int textView_date7=0x7f090040;
-        public static final int textView_date8=0x7f090041;
-        public static final int textView_hour1=0x7f090024;
-        public static final int textView_hour2=0x7f090026;
-        public static final int textView_hour3=0x7f090028;
-        public static final int textView_hour4=0x7f09002b;
-        public static final int textView_hour5=0x7f09002e;
-        public static final int textView_hour6=0x7f090031;
-        public static final int textView_hour7=0x7f090034;
-        public static final int textView_hour8=0x7f090037;
-        public static final int textView_location=0x7f09000c;
-        public static final int textView_max1=0x7f09000f;
-        public static final int textView_max2=0x7f090014;
-        public static final int textView_min1=0x7f090010;
-        public static final int textView_min2=0x7f090015;
-        public static final int textView_pref=0x7f090018;
-        public static final int textView_probability=0x7f090021;
-        public static final int textView_probability1=0x7f090011;
-        public static final int textView_probability2=0x7f090016;
-        public static final int textView_temp=0x7f090020;
-        public static final int textView_temp1=0x7f090025;
-        public static final int textView_temp2=0x7f090027;
-        public static final int textView_temp3=0x7f09002a;
-        public static final int textView_temp4=0x7f09002d;
-        public static final int textView_temp5=0x7f090030;
-        public static final int textView_temp6=0x7f090033;
-        public static final int textView_temp7=0x7f090036;
-        public static final int textView_temp8=0x7f090039;
+        public static final int analogClock=0x7f080022;
+        public static final int button_ok=0x7f08001a;
+        public static final int ics_imageView_forecast=0x7f080008;
+        public static final int ics_linearlayout=0x7f080000;
+        public static final int ics_relativeLayout_forecast=0x7f080004;
+        public static final int ics_relativeLayout_forecast1=0x7f080006;
+        public static final int ics_stack_view=0x7f080001;
+        public static final int ics_textView_date=0x7f080007;
+        public static final int ics_textView_location=0x7f080003;
+        public static final int ics_textView_max=0x7f080009;
+        public static final int ics_textView_min=0x7f08000a;
+        public static final int ics_textView_probability=0x7f080005;
+        public static final int ics_widget_weekly_item=0x7f080002;
+        public static final int imageView1=0x7f08000e;
+        public static final int imageView2=0x7f080013;
+        public static final int imageView3=0x7f08002a;
+        public static final int imageView4=0x7f08002d;
+        public static final int imageView5=0x7f080030;
+        public static final int imageView6=0x7f080033;
+        public static final int imageView7=0x7f080036;
+        public static final int imageView8=0x7f080039;
+        public static final int imageView_forecast=0x7f08001f;
+        public static final int linearLayout1=0x7f08001c;
+        public static final int linearLayout2=0x7f080024;
+        public static final int relativeLayout=0x7f080017;
+        public static final int relativeLayout1=0x7f08001d;
+        public static final int relativeLayout_2days=0x7f08000b;
+        public static final int relativeLayout_today=0x7f08001b;
+        public static final int relativeLayout_today2=0x7f08003b;
+        public static final int relativeLayout_weekly=0x7f08003c;
+        public static final int spinner_pref=0x7f080019;
+        public static final int textView_battery=0x7f080023;
+        public static final int textView_date=0x7f08001e;
+        public static final int textView_date1=0x7f08000d;
+        public static final int textView_date2=0x7f080012;
+        public static final int textView_date3=0x7f08003d;
+        public static final int textView_date4=0x7f08003e;
+        public static final int textView_date5=0x7f08003f;
+        public static final int textView_date6=0x7f080040;
+        public static final int textView_date7=0x7f080041;
+        public static final int textView_date8=0x7f080042;
+        public static final int textView_hour1=0x7f080025;
+        public static final int textView_hour2=0x7f080027;
+        public static final int textView_hour3=0x7f080029;
+        public static final int textView_hour4=0x7f08002c;
+        public static final int textView_hour5=0x7f08002f;
+        public static final int textView_hour6=0x7f080032;
+        public static final int textView_hour7=0x7f080035;
+        public static final int textView_hour8=0x7f080038;
+        public static final int textView_location=0x7f08000c;
+        public static final int textView_max1=0x7f08000f;
+        public static final int textView_max2=0x7f080014;
+        public static final int textView_min1=0x7f080010;
+        public static final int textView_min2=0x7f080015;
+        public static final int textView_pref=0x7f080018;
+        public static final int textView_probability=0x7f080021;
+        public static final int textView_probability1=0x7f080011;
+        public static final int textView_probability2=0x7f080016;
+        public static final int textView_temp=0x7f080020;
+        public static final int textView_temp1=0x7f080026;
+        public static final int textView_temp2=0x7f080028;
+        public static final int textView_temp3=0x7f08002b;
+        public static final int textView_temp4=0x7f08002e;
+        public static final int textView_temp5=0x7f080031;
+        public static final int textView_temp6=0x7f080034;
+        public static final int textView_temp7=0x7f080037;
+        public static final int textView_temp8=0x7f08003a;
     }
     public static final class layout {
         public static final int ics_widget_weekly=0x7f030000;
@@ -157,6 +167,7 @@ public final class R {
     public static final class string {
         public static final int OKButton=0x7f060006;
         public static final int app_name=0x7f060000;
+        public static final int battery=0x7f060008;
         public static final int ics_widget_weekly_name=0x7f060005;
         public static final int location=0x7f060007;
         public static final int widget_2days_name=0x7f060003;
@@ -175,12 +186,12 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
-        public static final int Theme_Dialog=0x7f080002;
+        public static final int AppTheme=0x7f070001;
+        public static final int Theme_Dialog=0x7f070002;
     }
     public static final class xml {
         public static final int ics_widget_weekly=0x7f040000;
