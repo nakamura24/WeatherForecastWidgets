@@ -22,7 +22,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -180,9 +179,7 @@ public class WidgetToday extends WidgetBase {
 					weeklyForecasts.get(0).Temp);
 			remoteViews.setTextViewText(R.id.textView_probability,
 					weeklyForecasts.get(0).Probability);
-			Resources resource = context.getResources();
-			String battery = resource.getString(R.string.battery);
-			remoteViews.setTextViewText(R.id.textView_battery, String.format(battery, mBattery));
+			remoteViews.setProgressBar(R.id.progressBar, 100, mBattery, false);
 
 			int[] textView_hours = { R.id.textView_hour1, R.id.textView_hour2,
 					R.id.textView_hour3, R.id.textView_hour4,
