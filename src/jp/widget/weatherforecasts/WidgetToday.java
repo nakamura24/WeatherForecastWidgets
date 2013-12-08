@@ -22,7 +22,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -120,8 +119,8 @@ public class WidgetToday extends WidgetBase {
 					final int appWidgetId = extras.getInt(
 							AppWidgetManager.EXTRA_APPWIDGET_ID,
 							AppWidgetManager.INVALID_APPWIDGET_ID);
-					int id = extras.getInt(LOCATEID, INIT_ID);
 					StaticHash hash = new StaticHash(context);
+					int id = extras.getInt(LOCATEID, hash.get(LOCATEID + TAG, INIT_ID));
 					hash.put(LOCATEID + TAG, String.valueOf(appWidgetId), id);
 					Log.d(TAG,
 							"CONFIG_DONE appWidgetId="
@@ -148,9 +147,8 @@ public class WidgetToday extends WidgetBase {
 		try {
 			Log.i(TAG, "updateAppWidget - " + String.valueOf(appWidgetId));
 			// ボタンが押された時に発行されるインテントを準備する
-			Intent intent = new Intent(context, WidgetConfigure.class);
+			Intent intent = new Intent(context, WidgetTodayConfig.class);
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
-			intent.putExtra(APPWIDGET_CALLER, TAG);
 			intent.setAction(APPWIDGET_CONFIGURE);
 			PendingIntent pendingIntent = PendingIntent.getActivity(context,
 					appWidgetId, intent, 0);
@@ -180,9 +178,7 @@ public class WidgetToday extends WidgetBase {
 					weeklyForecasts.get(0).Temp);
 			remoteViews.setTextViewText(R.id.textView_probability,
 					weeklyForecasts.get(0).Probability);
-			Resources resource = context.getResources();
-			String battery = resource.getString(R.string.battery);
-			remoteViews.setTextViewText(R.id.textView_battery, String.format(battery, mBattery));
+			remoteViews.setProgressBar(R.id.progressBar, 100, mBattery, false);
 
 			int[] textView_hours = { R.id.textView_hour1, R.id.textView_hour2,
 					R.id.textView_hour3, R.id.textView_hour4,

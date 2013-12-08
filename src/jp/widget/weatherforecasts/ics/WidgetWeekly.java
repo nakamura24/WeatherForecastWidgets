@@ -123,8 +123,8 @@ public class WidgetWeekly extends WidgetBase {
 					final int appWidgetId = extras.getInt(
 							AppWidgetManager.EXTRA_APPWIDGET_ID,
 							AppWidgetManager.INVALID_APPWIDGET_ID);
-					int id = extras.getInt(LOCATEID, INIT_ID);
 					StaticHash hash = new StaticHash(context);
+					int id = extras.getInt(LOCATEID, hash.get(LOCATEID + TAG, INIT_ID));
 					hash.put(LOCATEID + TAG, String.valueOf(appWidgetId), id);
 					Log.d(TAG,
 							"CONFIG_DONE appWidgetId="
@@ -148,10 +148,9 @@ public class WidgetWeekly extends WidgetBase {
 							AppWidgetManager.EXTRA_APPWIDGET_ID,
 							AppWidgetManager.INVALID_APPWIDGET_ID);
 					Intent congigIntent = new Intent(context,
-							WidgetConfigure.class);
+							WidgetWeeklyConfig.class);
 					congigIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,
 							appWidgetId);
-					congigIntent.putExtra(APPWIDGET_CALLER, TAG);
 					congigIntent.setAction(APPWIDGET_CONFIGURE);
 					PendingIntent pendingIntent = PendingIntent.getActivity(
 							context, appWidgetId, congigIntent, 0);

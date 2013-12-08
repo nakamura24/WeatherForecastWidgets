@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (C) 2012 M.Nakamura
  *
  * This software is licensed under a Creative Commons
@@ -24,10 +24,9 @@ import android.widget.LinearLayout.LayoutParams;
 
 import static jp.widget.weatherforecasts.Constant.*;
 
-public class WidgetConfigure extends Activity {
+public class Widget2daysConfig extends Activity {
 	private static final String TAG = "WidgetConfigure";
 	private int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
-	private String mCaller;
 	private int mPosition = 63 - 1;
 	private int mId = 4410;
 	private WeatherForecast mWeatherForecast;
@@ -45,16 +44,14 @@ public class WidgetConfigure extends Activity {
 				mAppWidgetId = extras.getInt(
 						AppWidgetManager.EXTRA_APPWIDGET_ID,
 						AppWidgetManager.INVALID_APPWIDGET_ID);
-				mCaller = extras.getString(APPWIDGET_CALLER);
 				Log.d(TAG, "mAppWidgetId=" + String.valueOf(mAppWidgetId));
 				StaticHash hash = new StaticHash(this);
-				mId = hash.get(LOCATEID,
-						String.valueOf(mAppWidgetId), mId);
-				mPosition = hash.get(POSITION,
-						String.valueOf(mAppWidgetId), mPosition);
+				mId = hash.get(LOCATEID, String.valueOf(mAppWidgetId), mId);
+				mPosition = hash.get(POSITION, String.valueOf(mAppWidgetId),
+						mPosition);
 			}
 			mWeatherForecast = new WeatherForecast();
-			
+
 			setContentView(R.layout.widget_configure);
 			getWindow().setLayout(LayoutParams.MATCH_PARENT,
 					LayoutParams.WRAP_CONTENT);
@@ -69,7 +66,7 @@ public class WidgetConfigure extends Activity {
 						.getLocationName(mWeatherForecast.getLocationIDs()[i]));
 			}
 			Spinner spinner1 = (Spinner) findViewById(R.id.spinner_pref);
-	        // アダプターを設定します
+			// アダプターを設定します
 			spinner1.setAdapter(forecast_location_adapter);
 			// Spinner のアイテムが選択された時に呼び出されるコールバックを登録
 			spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -95,32 +92,13 @@ public class WidgetConfigure extends Activity {
 		}
 	}
 
-
 	// Button の onClick で実装
 	public void onOKButtonClick(View v) {
 		try {
 			Log.i(TAG, "onOKButtonClick");
 			StaticHash hash = new StaticHash(this);
-			hash.put(LOCATEID,
-					String.valueOf(mAppWidgetId), mId);
-			hash.put(POSITION,
-					String.valueOf(mAppWidgetId), mPosition);
-			Intent intent = null;
-			if(WidgetToday.TAG.equals(mCaller)){
-				intent = new Intent(this, WidgetToday.class);
-			}
-			if(WidgetToday2.TAG.equals(mCaller)){
-				intent = new Intent(this, WidgetToday2.class);
-			}
-			if(Widget2days.TAG.equals(mCaller)){
-				intent = new Intent(this, Widget2days.class);
-			}
-			if(WidgetWeekly.TAG.equals(mCaller)){
-				intent = new Intent(this, WidgetWeekly.class);
-			}
-			if(jp.widget.weatherforecasts.ics.WidgetWeekly.TAG.equals(mCaller)){
-				intent = new Intent(this, jp.widget.weatherforecasts.ics.WidgetWeekly.class);
-			}
+			hash.put(POSITION, String.valueOf(mAppWidgetId), mPosition);
+			Intent intent = new Intent(this, Widget2days.class);
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
 			intent.putExtra(LOCATEID, mId);
 			intent.setAction(CONFIG_DONE);
