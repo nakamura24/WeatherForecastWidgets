@@ -158,7 +158,8 @@ public class WidgetWeekly extends WidgetBase {
 					pendingIntent);
 
 			StaticHash hash = new StaticHash(context);
-			int id = hash.get(LOCATEID + TAG, String.valueOf(appWidgetId), INIT_ID);
+			int id = hash.get(LOCATEID + TAG, String.valueOf(appWidgetId),
+					INIT_ID);
 
 			weatherForecast = new WeatherForecast();
 			remoteViews.setTextViewText(R.id.textView_location,
@@ -175,16 +176,20 @@ public class WidgetWeekly extends WidgetBase {
 					R.id.textView_temp3, R.id.textView_temp4,
 					R.id.textView_temp5, R.id.textView_temp6,
 					R.id.textView_temp7, R.id.textView_temp8, };
+			int[] textView_probabilitys = { R.id.textView_probability1, R.id.textView_probability2,
+					R.id.textView_probability3, R.id.textView_probability4,
+					R.id.textView_probability5, R.id.textView_probability6,
+					R.id.textView_probability7, R.id.textView_probability8, };
 			int[] imageViews = { R.id.imageView1, R.id.imageView2,
 					R.id.imageView3, R.id.imageView4, R.id.imageView5,
 					R.id.imageView6, R.id.imageView7, R.id.imageView8, };
 			for (int i = 0; i < weeklyForecasts.size() && i < 8; i++) {
 				remoteViews.setTextViewText(textView_dates[i],
 						weeklyForecasts.get(i).Date);
-				remoteViews.setTextViewText(
-						textView_temps[i],
-						weeklyForecasts.get(i).Temp + "\n"
-								+ weeklyForecasts.get(i).Probability);
+				remoteViews.setTextViewText(textView_temps[i],
+						weeklyForecasts.get(i).Temp);
+				remoteViews.setTextViewText(textView_probabilitys[i],
+						weeklyForecasts.get(i).Probability);
 				remoteViews.setImageViewResource(imageViews[i], weatherForecast
 						.getBitmapResource(weeklyForecasts.get(i).Forecast));
 			}

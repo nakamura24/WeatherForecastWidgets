@@ -79,6 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/today_horizontal_margin"
+            android:layout_marginRight="@dimen/today_horizontal_margin"
             android:layout_weight="1"
             android:orientation="vertical" >
 
@@ -90,15 +91,15 @@
                 android:hand_hour="@drawable/hour_black"
                 android:hand_minute="@drawable/minute_black" />
 
-            <TextView
-                android:id="@+id/textView_battery"
-                android:layout_width="wrap_content"
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/analogClock"
                 android:layout_centerHorizontal="true"
-                android:textColor="#000"
-                android:textSize="@dimen/today_battery_textSize"
-                android:textStyle="bold" />
+                android:max="100" />
+
         </RelativeLayout>
     </LinearLayout>
 

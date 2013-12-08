@@ -59,6 +59,16 @@
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp1"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -92,6 +102,16 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp2"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -127,6 +147,16 @@
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp3"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -160,6 +190,16 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp4"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
@@ -203,6 +243,16 @@
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp5"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -236,6 +286,16 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp6"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -271,6 +331,16 @@
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp7"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -304,6 +374,16 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="#000"
                 android:textSize="@dimen/weekly_temp_textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temp8"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000"
+                android:textSize="@dimen/weekly_probability_textSize"
                 android:textStyle="bold" />
         </RelativeLayout>
     </LinearLayout>
