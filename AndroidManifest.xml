@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.widget.weatherforecasts"
-    android:versionCode="6"
-    android:versionName="1.0.6" >
+    android:versionCode="7"
+    android:versionName="1.0.7" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -32,6 +32,14 @@
             android:name=".WidgetToday$WidgetService"
             android:exported="false" />
 
+        <activity
+            android:name=".WidgetTodayConfig"
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        
         <receiver
             android:name=".WidgetToday2"
             android:label="@string/widget_today2_name" >
@@ -48,6 +56,14 @@
             android:name=".WidgetToday2$WidgetService"
             android:exported="false" />
 
+        <activity
+            android:name=".WidgetToday2Config"
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        
         <receiver
             android:name=".Widget2days"
             android:label="@string/widget_2days_name" >
@@ -64,6 +80,14 @@
             android:name=".Widget2days$WidgetService"
             android:exported="false" />
 
+        <activity
+            android:name=".Widget2daysConfig"
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        
         <receiver
             android:name=".WidgetWeekly"
             android:label="@string/widget_weekly_name" >
@@ -80,6 +104,14 @@
             android:name=".WidgetWeekly$WidgetService"
             android:exported="false" />
 
+        <activity
+            android:name=".WidgetWeeklyConfig"
+            android:theme="@style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        
         <receiver
             android:name=".ics.WidgetWeekly"
             android:label="@string/ics_widget_weekly_name" >
@@ -101,7 +133,7 @@
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <activity
-            android:name=".WidgetConfigure"
+            android:name=".ics.WidgetWeeklyConfig"
             android:theme="@style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />

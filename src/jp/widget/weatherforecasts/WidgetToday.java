@@ -119,8 +119,8 @@ public class WidgetToday extends WidgetBase {
 					final int appWidgetId = extras.getInt(
 							AppWidgetManager.EXTRA_APPWIDGET_ID,
 							AppWidgetManager.INVALID_APPWIDGET_ID);
-					int id = extras.getInt(LOCATEID, INIT_ID);
 					StaticHash hash = new StaticHash(context);
+					int id = extras.getInt(LOCATEID, hash.get(LOCATEID + TAG, INIT_ID));
 					hash.put(LOCATEID + TAG, String.valueOf(appWidgetId), id);
 					Log.d(TAG,
 							"CONFIG_DONE appWidgetId="
@@ -147,9 +147,8 @@ public class WidgetToday extends WidgetBase {
 		try {
 			Log.i(TAG, "updateAppWidget - " + String.valueOf(appWidgetId));
 			// ボタンが押された時に発行されるインテントを準備する
-			Intent intent = new Intent(context, WidgetConfigure.class);
+			Intent intent = new Intent(context, WidgetTodayConfig.class);
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
-			intent.putExtra(APPWIDGET_CALLER, TAG);
 			intent.setAction(APPWIDGET_CONFIGURE);
 			PendingIntent pendingIntent = PendingIntent.getActivity(context,
 					appWidgetId, intent, 0);
