@@ -145,14 +145,17 @@ public class Widget2days extends WidgetBase {
 			WeatherForecast weatherForecast) {
 		try {
 			Log.i(TAG, "updateAppWidget - " + String.valueOf(appWidgetId));
+			AppWidgetManager appWidgetManager = AppWidgetManager
+					.getInstance(context);
+			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
+					R.layout.widget_2days);
+			
 			// ボタンが押された時に発行されるインテントを準備する
 			Intent intent = new Intent(context, Widget2daysConfig.class);
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
 			intent.setAction(APPWIDGET_CONFIGURE);
 			PendingIntent pendingIntent = PendingIntent.getActivity(context,
 					appWidgetId, intent, 0);
-			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
-					R.layout.widget_2days);
 			remoteViews.setOnClickPendingIntent(R.id.relativeLayout_2days,
 					pendingIntent);
 
@@ -187,8 +190,6 @@ public class Widget2days extends WidgetBase {
 			remoteViews.setTextViewText(R.id.textView_probability2,
 					weeklyForecasts.get(1).Probability);
 
-			AppWidgetManager appWidgetManager = AppWidgetManager
-					.getInstance(context);
 			appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
 		} catch (Exception ex) {
 			Log.e(TAG, ex.getMessage());

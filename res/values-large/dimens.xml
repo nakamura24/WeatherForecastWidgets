@@ -31,5 +31,5 @@
     <dimen name="stacks_probability_textSize">12sp</dimen>
     <dimen name="stacks_horizontal_margin">8dp</dimen>
     <dimen name="stacks_vertical_margin">-2dp</dimen>
-
+    
 </resources>

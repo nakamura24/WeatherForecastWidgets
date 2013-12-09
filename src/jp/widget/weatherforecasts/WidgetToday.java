@@ -120,7 +120,8 @@ public class WidgetToday extends WidgetBase {
 							AppWidgetManager.EXTRA_APPWIDGET_ID,
 							AppWidgetManager.INVALID_APPWIDGET_ID);
 					StaticHash hash = new StaticHash(context);
-					int id = extras.getInt(LOCATEID, hash.get(LOCATEID + TAG, INIT_ID));
+					int id = extras.getInt(LOCATEID,
+							hash.get(LOCATEID + TAG, INIT_ID));
 					hash.put(LOCATEID + TAG, String.valueOf(appWidgetId), id);
 					Log.d(TAG,
 							"CONFIG_DONE appWidgetId="
@@ -146,14 +147,17 @@ public class WidgetToday extends WidgetBase {
 			WeatherForecast weatherForecast) {
 		try {
 			Log.i(TAG, "updateAppWidget - " + String.valueOf(appWidgetId));
+			AppWidgetManager appWidgetManager = AppWidgetManager
+					.getInstance(context);
+			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
+					R.layout.widget_today);
+
 			// ボタンが押された時に発行されるインテントを準備する
 			Intent intent = new Intent(context, WidgetTodayConfig.class);
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
 			intent.setAction(APPWIDGET_CONFIGURE);
 			PendingIntent pendingIntent = PendingIntent.getActivity(context,
 					appWidgetId, intent, 0);
-			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
-					R.layout.widget_today);
 			remoteViews.setOnClickPendingIntent(R.id.relativeLayout_today,
 					pendingIntent);
 
@@ -202,8 +206,6 @@ public class WidgetToday extends WidgetBase {
 						.getBitmapResource(oneDayForecasts.get(i).Forecast));
 			}
 
-			AppWidgetManager appWidgetManager = AppWidgetManager
-					.getInstance(context);
 			appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
 		} catch (Exception ex) {
 			Log.e(TAG, ex.getMessage());
@@ -255,13 +257,12 @@ public class WidgetToday extends WidgetBase {
 						});
 						weatherForecast.getForecast(context, id);
 					}
-					if (Intent.ACTION_BATTERY_CHANGED.equals(intent
-							.getAction())) {
+					if (Intent.ACTION_BATTERY_CHANGED
+							.equals(intent.getAction())) {
 						int level = intent.getIntExtra("level", 0);
 						int scale = intent.getIntExtra("scale", 0);
 						mBattery = (int) (level * 100 / scale);
-						updateAppWidget(context, appWidgetId,
-								weatherForecast);
+						updateAppWidget(context, appWidgetId, weatherForecast);
 					}
 				}
 			}

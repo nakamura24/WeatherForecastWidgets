@@ -4,5 +4,7 @@
     android:minWidth="180dip"
     android:minHeight="110dip"
     android:initialLayout="@layout/widget_today"
-    android:configure="jp.widget.weatherforecasts.WidgetTodayConfig" 
+    android:configure="jp.widget.weatherforecasts.WidgetTodayConfig"
+    android:resizeMode="vertical"
+    android:widgetCategory="home_screen|keyguard"
     android:updatePeriodMillis="0" />

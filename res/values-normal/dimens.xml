@@ -2,14 +2,15 @@
 
     <!-- Normal screen margins, per the Android Design guidelines. -->
     <dimen name="location_textSize">12sp</dimen>
-    <dimen name="today_horizontal_margin">9dp</dimen>
+    <dimen name="progress_bar_height">20dp</dimen>
+    <dimen name="today_horizontal_margin">4dp</dimen>
     <dimen name="today_image_vertical_margin">-8dp</dimen>
     <dimen name="today_forecast_image_size">60dp</dimen>
     <dimen name="today_date_textSize">18sp</dimen>
     <dimen name="today_day_temp_textSize">16sp</dimen>
     <dimen name="today_probability_textSize">14sp</dimen>
     <dimen name="today_battery_textSize">14sp</dimen>
-    <dimen name="today2_horizontal_margin">0dp</dimen>
+    <dimen name="today2_horizontal_margin">2dp</dimen>
     <dimen name="today2_image_vertical_margin">-6dp</dimen>
     <dimen name="today2_forecast_image_size">50dp</dimen>
     <dimen name="today2_date_textSize">14sp</dimen>

@@ -145,14 +145,17 @@ public class WidgetWeekly extends WidgetBase {
 			WeatherForecast weatherForecast) {
 		try {
 			Log.i(TAG, "updateAppWidget - " + String.valueOf(appWidgetId));
+			AppWidgetManager appWidgetManager = AppWidgetManager
+					.getInstance(context);
+			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
+					R.layout.widget_weekly);
+			
 			// ボタンが押された時に発行されるインテントを準備する
 			Intent intent = new Intent(context, WidgetWeeklyConfig.class);
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
 			intent.setAction(APPWIDGET_CONFIGURE);
 			PendingIntent pendingIntent = PendingIntent.getActivity(context,
 					appWidgetId, intent, 0);
-			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
-					R.layout.widget_weekly);
 			remoteViews.setOnClickPendingIntent(R.id.relativeLayout_weekly,
 					pendingIntent);
 
@@ -193,8 +196,6 @@ public class WidgetWeekly extends WidgetBase {
 						.getBitmapResource(weeklyForecasts.get(i).Forecast));
 			}
 
-			AppWidgetManager appWidgetManager = AppWidgetManager
-					.getInstance(context);
 			appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
 		} catch (Exception ex) {
 			Log.e(TAG, ex.getMessage());
