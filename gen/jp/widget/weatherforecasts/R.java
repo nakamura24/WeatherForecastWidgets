@@ -16,6 +16,7 @@ public final class R {
  x-Large screen margins, per the Android Design guidelines. 
          */
         public static final int location_textSize=0x7f050002;
+        public static final int progress_bar_height=0x7f050020;
         public static final int stack_date_textSize=0x7f05001b;
         public static final int stack_temp_textSize=0x7f05001c;
         public static final int stacks_horizontal_margin=0x7f05001e;
@@ -27,6 +28,8 @@ public final class R {
         public static final int today2_day_temp_textSize=0x7f05000e;
         public static final int today2_forecast_image_size=0x7f05000c;
         public static final int today2_horizontal_margin=0x7f05000a;
+        /**  Large screen margins, per the Android Design guidelines. 
+         */
         public static final int today2_image_vertical_margin=0x7f05000b;
         public static final int today2_probability_textSize=0x7f05000f;
         public static final int today_battery_textSize=0x7f050009;
@@ -36,6 +39,8 @@ public final class R {
         public static final int today_horizontal_margin=0x7f050003;
         public static final int today_hour_temp_textSize=0x7f050012;
         public static final int today_hour_textSize=0x7f050011;
+        /**  x-Large screen margins, per the Android Design guidelines. 
+         */
         public static final int today_image_vertical_margin=0x7f050004;
         public static final int today_probability_textSize=0x7f050008;
         public static final int twodays_date_textSize=0x7f050014;
@@ -112,23 +117,24 @@ public final class R {
         public static final int imageView_forecast=0x7f08001f;
         public static final int linearLayout1=0x7f08001c;
         public static final int linearLayout2=0x7f080024;
+        public static final int linearLayout3=0x7f08003b;
         public static final int progressBar=0x7f080023;
         public static final int relativeLayout=0x7f080017;
         public static final int relativeLayout1=0x7f08001d;
         public static final int relativeLayout_2days=0x7f08000b;
         public static final int relativeLayout_today=0x7f08001b;
-        public static final int relativeLayout_today2=0x7f08003b;
-        public static final int relativeLayout_weekly=0x7f08003c;
+        public static final int relativeLayout_today2=0x7f08003c;
+        public static final int relativeLayout_weekly=0x7f08003d;
         public static final int spinner_pref=0x7f080019;
         public static final int textView_date=0x7f08001e;
         public static final int textView_date1=0x7f08000d;
         public static final int textView_date2=0x7f080012;
-        public static final int textView_date3=0x7f08003d;
-        public static final int textView_date4=0x7f08003f;
-        public static final int textView_date5=0x7f080041;
-        public static final int textView_date6=0x7f080043;
-        public static final int textView_date7=0x7f080045;
-        public static final int textView_date8=0x7f080047;
+        public static final int textView_date3=0x7f08003e;
+        public static final int textView_date4=0x7f080040;
+        public static final int textView_date5=0x7f080042;
+        public static final int textView_date6=0x7f080044;
+        public static final int textView_date7=0x7f080046;
+        public static final int textView_date8=0x7f080048;
         public static final int textView_hour1=0x7f080025;
         public static final int textView_hour2=0x7f080027;
         public static final int textView_hour3=0x7f080029;
@@ -146,12 +152,12 @@ public final class R {
         public static final int textView_probability=0x7f080021;
         public static final int textView_probability1=0x7f080011;
         public static final int textView_probability2=0x7f080016;
-        public static final int textView_probability3=0x7f08003e;
-        public static final int textView_probability4=0x7f080040;
-        public static final int textView_probability5=0x7f080042;
-        public static final int textView_probability6=0x7f080044;
-        public static final int textView_probability7=0x7f080046;
-        public static final int textView_probability8=0x7f080048;
+        public static final int textView_probability3=0x7f08003f;
+        public static final int textView_probability4=0x7f080041;
+        public static final int textView_probability5=0x7f080043;
+        public static final int textView_probability6=0x7f080045;
+        public static final int textView_probability7=0x7f080047;
+        public static final int textView_probability8=0x7f080049;
         public static final int textView_temp=0x7f080020;
         public static final int textView_temp1=0x7f080026;
         public static final int textView_temp2=0x7f080028;

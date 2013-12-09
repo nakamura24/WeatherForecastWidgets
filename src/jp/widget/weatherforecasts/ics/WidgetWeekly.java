@@ -166,6 +166,8 @@ public class WidgetWeekly extends WidgetBase {
 			WeatherForecast weatherForecast) {
 		try {
 			Log.i(TAG, "updateAppWidget - " + String.valueOf(appWidgetId));
+			AppWidgetManager appWidgetManager = AppWidgetManager
+					.getInstance(context);
 			RemoteViews remoteViews = new RemoteViews(context.getPackageName(),
 					R.layout.ics_widget_weekly);
 
@@ -190,8 +192,6 @@ public class WidgetWeekly extends WidgetBase {
 			remoteViews.setPendingIntentTemplate(R.id.ics_stack_view,
 					fillInPendingIntent);
 
-			AppWidgetManager appWidgetManager = AppWidgetManager
-					.getInstance(context);
 			appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetId,
 					R.id.ics_stack_view);
 			appWidgetManager.updateAppWidget(appWidgetId, remoteViews);

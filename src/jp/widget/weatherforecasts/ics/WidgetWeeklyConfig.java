@@ -26,7 +26,7 @@ import android.widget.LinearLayout.LayoutParams;
 import static jp.widget.weatherforecasts.Constant.*;
 
 public class WidgetWeeklyConfig extends Activity {
-	private static final String TAG = "WidgetConfigure";
+	private static final String TAG = "WidgetWeeklyConfig";
 	private int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 	private int mPosition = 63 - 1;
 	private int mId = 4410;

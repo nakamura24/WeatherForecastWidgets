@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Large screen margins, per the Android Design guidelines. -->
+    <dimen name="today2_image_vertical_margin">-10dp</dimen>
+    <dimen name="today2_horizontal_margin">12dp</dimen>
+
+</resources>
